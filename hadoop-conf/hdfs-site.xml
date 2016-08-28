@@ -17,13 +17,14 @@
 <!-- Put site-specific property overrides in this file. -->
 
 <configuration>
- 	<property>
+<!--	<property>
 		<name>dfs.namenode.secondary.http-address</name>
-		<value>hadoop1:50090</value>
+		<value>hadoop:50090</value>
 	</property>
+-->
 	<property>
 		<name>dfs.replication</name>
-		<value>2</value>
+		<value>1</value>
 	</property>
 	<property>
 		<name>dfs.permissions.enabled</name>
@@ -33,85 +34,17 @@
 		<name>dfs.blocksize</name>
 		<value>33554432</value>
 	</property>
- 	<property>
-		<name>dfs.namenode.checkpoint.dir</name>
-		<value>/opt/modules/hadoop-2.7.2/data/dfs/ck</value>
-	</property>
-	 	<property>
-		<name>dfs.namenode.checkpoint.edits.dir</name>
-		<value>${dfs.namenode.checkpoint.dir}</value>
-	</property>
- 	<property>
-		<name>dfs.namenode.checkpoint.period</name>
-		<value>3600</value>
-	</property>
- 	<property>
-		<name>dfs.namenode.checkpoint.check.period</name>
-		<value>60</value>
-	</property>
-	
+
 	<property>
 		<name>dfs.namenode.name.dir</name>
-		<value>/opt/modules/hadoop-2.7.2/data/dfs/name</value>
+		<value>file:/opt/modules/hadoop-2.7.2/data-single/dfs/name</value>
 	</property>
 	<property>
 		<name>dfs.datanode.data.dir</name>
-		<value>/opt/modules/hadoop-2.7.2/data/dfs/data</value>
+		<value>file:/opt/modules/hadoop-2.7.2/data-single/dfs/data</value>
 	</property>
 	<property>
 		<name>dfs.webhdfs.enabled</name>
 		<value>true</value>
 	</property>
-<!--	<property>
-		<name>dfs.nameservices</name>
-		<value>cluster</value>
-	</property>
-	<property>
-		<name>dfs.ha.namenodes.cluster</name>
-		<value>nn1,nn2</value>
-	</property>
-	<property>
-		<name>dfs.namenode.rpc-address.cluster.nn1</name>
-		<value>hadoop:9000</value>
-	</property>
-	<property>
-		<name>dfs.namenode.rpc-address.cluster.nn2</name>
-		<value>hadoop1:9000</value>
-	</property>
-	<property>
-		<name>dfs.namenode.http-address.cluster.nn1</name>
-		<value>hadoop:50070</value>
-	</property>
-	<property>
-		<name>dfs.namenode.http-address.cluster.nn2</name>
-		<value>hadoop1:50070</value>
-	</property>
-
-	<property>
-		<name>dfs.namenode.shared.edits.dir</name>
-		<value>qjournal://hadoop:8485;hadoop1:8485;hadoop2:8485/cluster</value>
-	</property>
-	<property>
-		<name>dfs.journalnode.edits.dir</name>
-		<value>/opt/modules/hadoop-2.7.2/data/journal</value>
-	</property>
- 
- 	<property>
-		<name>dfs.ha.automatic-failover.enabled.cluster</name>
-		<value>true</value>
-	</property>
-	<property>
-		<name>dfs.client.failover.proxy.provider.cluster</name>
-		<value>org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider</value>
-	</property>
-	<property>
-		<name>dfs.ha.fencing.methods</name>
-		<value>sshfence
-		shell(/bin/true)</value>
-	</property>
-	<property>
-		<name>ddfs.ha.fencing.ssh.private-key-files</name>
-		<value>/home/hadoop/.ssh/id_rsa</value>
-	</property>
-	-->
 </configuration>

@@ -1,4 +1,4 @@
-# config-distribute
+# config-single
 This is my personal Ubuntu commonly used profile
 The README.md let you know how to design:
 

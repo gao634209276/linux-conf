@@ -23,23 +23,23 @@
 <configuration>
   <property>
     <name>hbase.rootdir</name>
-    <value>hdfs://hadoop:8020/user/hbase</value>
-  </property> 
+    <value>hdfs://hadoop:9000/user/hbase</value>
+  </property>
   <property>
     <name>hbase.cluster.distributed</name>
     <value>true</value>
   </property>
-  <property>
+<property>
     <name>hbase.zookeeper.property.clientPort</name>
     <value>2181</value>
   </property>
   <property>
     <name>hbase.zookeeper.quorum</name>
-    <value>hadoop,hadoop1,hadoop2</value>
+    <value>hadoop</value>
   </property>
   <property>
     <name>hbase.zookeeper.property.dataDir</name>
-    <value>/opt/modules/hbase-1.2.1/data/zk</value>
+    <value>/opt/modules/hbase-1.2.1/data</value>
   </property>
   <property>
     <name>hbase.zookeeper.session.timeout</name>

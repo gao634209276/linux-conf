@@ -68,24 +68,26 @@
 # - SPARK_IDENT_STRING  A string representing this instance of spark. (Default: $USER)
 # - SPARK_NICENESS      The scheduling priority for daemons. (Default: 0)
 
-# export SPARK_HOME=/opt/modules/spark-compiled
-# export SPARK_MASTER_IP=hadoop
-# export SPARK_MASTER_PORT=7077
-# export SPARK_WORKER_CORES=1
-# export SPARK_WORKER_INSTANCES=1
-# export SPARK_WORKER_MEMORY=1g
+#export SPARK_LIBRARY_PATH=$SPARK_LIBRARY_PATH:/opt/modules/spark-1.6.1/lib:/usr/local/lzo/lib
+#export SPARK_CLASSPATH=$SPARK_CLASSPATH:/opt/modules/hadoop-2.7.2/share/hadoop/common/hadoop-lzo-0.4.20-SNAPSHOT.jar
+#export HADOOP_HOME=/opt/modules/hadoop-2.7.2
+#export HADOOP_CONF_DIR=/opt/modules/hadoop-2.7.2/etc/hadoop
 export SCALA_HOME=/usr/local/scala-2.10.4
 export JAVA_HOME=/usr/local/java/jdk1.7.0_80
-export HADOOP_HOME=/opt/modules/hadoop-2.7.2
-export HADOOP_CONF_DIR=/opt/modules/hadoop-2.7.2/etc/hadoop
+# export SPARK_JAVA_OPTS="-verbose:gc -XX:-PrintGCDetails -XX:+PrintGCTimeStamps"
+export SPARK_DAEMON_JAVA_OPTIS="-verbose:gc -XX:-PrintGCDetails -XX:+PrintGCTimeStamps"
 
+export SPARK_MASTER_IP=hadoop
 export SPARK_MASTER_PORT=7077
-export SPARK_MASTER_WEBUI_PORT=8083
-export SPARK_WORKER_WEBUI_PORT=8084
-# export SPARK_DRIVER_MEMPRY=4g
+export SPARK_MASTER_WEBUI_PORT=8010
+
+export SPARK_WORKER_PORT=7078
+export SPARK_WORKER_WEBUI_PORT=8011
+export SPARK_WORKER_CORES=5
 export SPARK_WORKER_MEMORY=4g
+
+export SPARK_DRIVER_MEMPRY=4g
 export SPARK_EXECUTOR_MEMORY=4g
 export SPARK_EXECUTOR_INSTANCES=1
-export SPARK_HISTORY_OPTS="-Dspark.history.fs.logDirectory=hdfs://hadoop9000/user/spark/history"
-export SPARK_DAEMON_JAVA_OPTS="-Dspark.deploy.recoveryMode=ZOOKEEPER -Dspark.deploy.zookeeper.url=hadoop:2181,hadoop1:2181,hadoop2:2181 -Dspark.deploy.zookeeper.dir=/spark"
-# export SCALA_HOME=/usr/local/scala-2.11.8
+# export SPARK_HISTORY_OPTS="-Dspark.history.fs.logDirectory=hdfs://hadoop:9000/user/spark/history"
+export SPARK_HISTORY_OPTS="-Dspark.history.fs.logDirectory=/opt/modules/spark-1.6.1/data/history"

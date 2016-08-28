@@ -51,4 +51,5 @@ export HADOOP_HOME=/opt/modules/hadoop-2.7.2
 # export HIVE_CONF_DIR=
 export HIVE_CONF_DIR=/opt/modules/hive-1.2.1/conf
 # Folder containing extra ibraries required for hive compilation/execution can be controlled by:
-# export HIVE_AUX_JARS_PATH=
+export HIVE_AUX_JARS_PATH=$HADOOP_CLASSPATH
+export SPARK_HOME=/opt/modules/spark

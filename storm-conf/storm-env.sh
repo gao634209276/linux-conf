@@ -20,5 +20,6 @@
 
 # The java implementation to use.
 #export JAVA_HOME=/path/to/jdk/home
-export JAVA_HOME=/usr/local/java/jdk1.7.0_80
+
 # export STORM_CONF_DIR=""
+export JAVA_HOME=/usr/local/java/jdk1.7.0_80
