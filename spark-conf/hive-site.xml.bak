@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+	<!--hive HDFS Dir-->
+	<property>
+		<name>hive.metastore.warehouse.dir</name>
+		<value>/user/hive/warehouse</value>
+	</property>
+	<!--hive Client-->
+	<property>
+		<name>hive.metastore.uris</name>
+		<value>thrift://hadoop:9083</value>
+		<description>Thrift URI for the remote metastore. Used by metastore client to connect to remote metastore.</description>
+	</property>
+
+	<!--hive-metastore Mysql-->
+	<property>
+		<name>javax.jdo.option.ConnectionURL</name>
+		<value>jdbc:mysql://hadoop:3306/hivetest?createDatabaseIfNotExist=true</value>
+	</property>
+	<property>
+		<name>javax.jdo.option.ConnectionDriverName</name>
+		<value>com.mysql.jdbc.Driver</value>
+	</property>
+	<property>
+		<name>javax.jdo.option.ConnectionUserName</name>
+		<value>hive</value>
+	</property>
+	<property>
+		<name>javax.jdo.option.ConnectionPassword</name>
+		<value>hive</value>
+	</property>
+	<!--hive-hwi-->
+	<property>
+		<name>hive.hwi.listen.host</name>
+		<value>0.0.0.0</value>
+	</property>
+	<property>
+		<name>hive.hwi.listen.port</name>
+		<value>9999</value>
+	</property>
+	<property>
+		<name>hive.hwi.war.file</name>
+		<value>lib/hive-hwi-1.2.1.war</value>
+	</property>
+
+	<property>
+		<name>hive.querylog.location</name> 
+		<value>/opt/modules/hive/logs</value>
+	</property> 
+	<!--hive-hbase-->
+	<property>    
+		<name>hive.aux.jars.path</name>     
+		<value>file:///opt/modules/hive-1.2.1/lib/hive-hbase-handler-1.2.1.jar,file:///opt/modules/hive-1.2.1/lib/guava-14.0.1.jar,file:///opt/modules/hive-1.2.1/lib/hbase-common-1.2.1.jar,file:///opt/modules/hive-1.2.1/lib/zookeeper-3.4.8.jar</value>    
+	</property>    
+	<property>
+		<name>hbase.zookeeper.quorum</name>
+		<value>hadoop:2181</value>
+	</property>
+</configuration>
