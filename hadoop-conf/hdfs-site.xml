@@ -16,12 +16,21 @@
 
 <!-- Put site-specific property overrides in this file. -->
 
+
 <configuration>
 <!--	<property>
 		<name>dfs.namenode.secondary.http-address</name>
 		<value>hadoop:50090</value>
 	</property>
 -->
+	<property>
+		<name>dfs.namenode.name.dir</name>
+		<value>file:///opt/modules/hadoop-2.7.2/data-ha/dfs/name</value>
+	</property>
+	<property>
+		<name>dfs.datanode.data.dir</name>
+		<value>file:///opt/modules/hadoop-2.7.2/data-ha/dfs/data</value>
+	</property>
 	<property>
 		<name>dfs.replication</name>
 		<value>2</value>
@@ -34,17 +43,17 @@
 		<name>dfs.blocksize</name>
 		<value>33554432</value>
 	</property>
-
-
 	<property>
 		<name>dfs.webhdfs.enabled</name>
 		<value>true</value>
 	</property>
-	
+
+	<!-- cluster config -->
 	<property>
 		<name>dfs.nameservices</name>
 		<value>cluster1,cluster2</value>
 	</property>
+	<!-- cluster1 set -->
 	<property>
 		<name>dfs.ha.namenodes.cluster1</name>
 		<value>nn1,nn2</value>
@@ -57,7 +66,6 @@
 		<name>dfs.namenode.rpc-address.cluster1.nn2</name>
 		<value>hadoop2:9000</value>
 	</property>
-
 	<property>
 		<name>dfs.namenode.http-address.cluster1.nn1</name>
 		<value>hadoop1:50070</value>
@@ -66,6 +74,35 @@
 		<name>dfs.namenode.http-address.cluster1.nn2</name>
 		<value>hadoop2:50070</value>
 	</property>
+	<property>
+		<name>dfs.namenode.shared.edits.dir</name>
+		<value>qjournal://hadoop:8485;hadoop1:8485;hadoop2:8485/cluster1</value>
+	</property>
+	<property>
+		<name>dfs.journalnode.edits.dir</name>
+		<value>/opt/modules/hadoop-2.7.2/data-ha/journal</value>
+	</property>
+	<property>
+		<name>dfs.ha.automatic-failover.enabled</name>
+		<value>true</value>
+	</property>
+	<property>
+		<name>dfs.client.failover.proxy.provider.cluster1</name>
+		<value>org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider</value>
+	</property>
+
+	<!-- fencing set -->
+	<property>
+		<name>dfs.ha.fencing.methods</name>
+		<value>sshfence
+		shell(/bin/true)</value>
+	</property>
+	<property>
+		<name>ddfs.ha.fencing.ssh.private-key-files</name>
+		<value>/home/hadoop/.ssh/id_rsa</value>
+	</property>	
+	
+	<!-- cluster2 set -->
 	<property>
 		<name>dfs.ha.namenodes.cluster2</name>
 		<value>nn3,nn4</value>
@@ -87,57 +124,13 @@
 		<name>dfs.namenode.http-address.cluster2.nn4</name>
 		<value>slave2:50070</value>
 	</property> 
-<!-- 
-	<property>
+	<!--<property>
 		<name>dfs.namenode.shared.edits.dir</name>
 		<value>qjournal://hadoop:8485;hadoop1:8485;hadoop2:8485/cluster2</value>
-	</property>
+	</property>-->
 
-] -->
-
-	<property>
-		<name>dfs.namenode.shared.edits.dir</name>
-		<value>qjournal://hadoop:8485;hadoop1:8485;hadoop2:8485/cluster1</value>
-	</property>
-	<property>
-		<name>dfs.journalnode.edits.dir</name>
-		<value>/opt/modules/hadoop-2.7.2/data-ha/journal</value>
-	</property>
-	<property>
-		<name>dfs.ha.automatic-failover.enabled.cluster1</name>
-		<value>true</value>
-	</property>
-	<property>
-		<name>dfs.client.failover.proxy.provider.cluster1</name>
-		<value>org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider</value>
-	</property>
-
-	<property>
-		<name>dfs.ha.automatic-failover.enabled.cluster2</name>
-		<value>true</value>
-	</property>
 	<property>
 		<name>dfs.client.failover.proxy.provider.cluster2</name>
 		<value>org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider</value>
-	</property>
-
-	<property>
-		<name>dfs.ha.fencing.methods</name>
-		<value>sshfence
-		shell(/bin/true)</value>
-	</property>
-	<property>
-		<name>ddfs.ha.fencing.ssh.private-key-files</name>
-		<value>/home/hadoop/.ssh/id_rsa</value>
-	</property>	
-
-
-	<property>
-		<name>dfs.namenode.name.dir</name>
-		<value>file:///opt/modules/hadoop-2.7.2/data-ha/dfs/name</value>
-	</property>
-	<property>
-		<name>dfs.datanode.data.dir</name>
-		<value>file:///opt/modules/hadoop-2.7.2/data-ha/dfs/data</value>
 	</property>
 </configuration>
