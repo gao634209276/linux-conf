@@ -57,10 +57,7 @@
 	<!--hive-hbase-->
 	<property>    
 		<name>hive.aux.jars.path</name>     
-		<value>file:///opt/modules/hive-1.2.1/lib/hive-hbase-handler-1.2.1.jar,
-		file:///opt/modules/hive-1.2.1/lib/guava-14.0.1.jar,
-		file:///opt/modules/hive-1.2.1/lib/hbase-common-1.2.1.jar,
-		file:///opt/modules/hive-1.2.1/lib/zookeeper-3.4.8.jar</value>    
+		<value>file:///opt/modules/hive-1.2.1/lib/hive-hbase-handler-1.2.1.jar,file:///opt/modules/hive-1.2.1/lib/guava-14.0.1.jar,file:///opt/modules/hive-1.2.1/lib/hbase-common-1.2.1.jar,file:///opt/modules/hive-1.2.1/lib/zookeeper-3.4.8.jar</value>    
 	</property>    
 	<property>
 		<name>hbase.zookeeper.quorum</name>
