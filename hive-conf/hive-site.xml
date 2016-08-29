@@ -15,10 +15,10 @@
 	</property> -->
 	
 	<!--hive-engine with tez-->
-	<property>
+	<!--<property>
 		<name>hive.execution.engine</name>
 		<value>tez</value>
-	</property>
+	</property>-->
 	<!--hive-metastore Mysql-->
 	<property>
 		<name>javax.jdo.option.ConnectionURL</name>

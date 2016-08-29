@@ -29,6 +29,8 @@
 		<name>io.file.buffer.size</name>
 		<value>131072</value>
 	</property>
+	<!--set httpFS port:14000-->
+	<!--hadoop: Unix username,允许httpfs访问hdfs的主机为所有节点,所有用户组-->
 	<property>
 		<name>hadoop.proxyuser.hadoop.hosts</name>
 		<value>*</value>
