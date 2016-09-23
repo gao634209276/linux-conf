@@ -37,11 +37,13 @@
 	</property>
 	
 	<property>
-		<name>mapred.compress.map.output</name>     
+	<!--mapred.compress.map.output -->
+		<name>mapreduce.map.output.compress</name>
 		<value>true</value>   
 	</property>   
-	<property>     
-		<name>mapred.map.output.compression.codec</name>      
+	<property>   
+	<!--mapred.map.output.compression.codec-->  
+		<name>mapreduce.output.fileoutputformat.compress.codec</name> 
 		<value>com.hadoop.compression.lzo.LzoCodec</value>   
 	</property>
 	
