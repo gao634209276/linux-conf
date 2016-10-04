@@ -68,15 +68,14 @@
 # - SPARK_IDENT_STRING  A string representing this instance of spark. (Default: $USER)
 # - SPARK_NICENESS      The scheduling priority for daemons. (Default: 0)
 
-#export SPARK_LIBRARY_PATH=$SPARK_LIBRARY_PATH:/opt/modules/spark-1.6.1/lib:/usr/local/lzo/lib
+# export HADOOP_HOME=/opt/modules/hadoop-2.7.2
+export SPARK_LIBRARY_PATH=$SPARK_LIBRARY_PATH:/opt/modules/spark-1.6.1/lib:/usr/local/lzo/lib
 #export SPARK_CLASSPATH=$SPARK_CLASSPATH:/opt/modules/hadoop-2.7.2/share/hadoop/common/hadoop-lzo-0.4.20-SNAPSHOT.jar
-#export HADOOP_HOME=/opt/modules/hadoop-2.7.2
 #export HADOOP_CONF_DIR=/opt/modules/hadoop-2.7.2/etc/hadoop
 export SCALA_HOME=/usr/local/scala-2.10.4
 export JAVA_HOME=/usr/local/java/jdk1.7.0_80
 # export SPARK_JAVA_OPTS="-verbose:gc -XX:-PrintGCDetails -XX:+PrintGCTimeStamps"
-export SPARK_DAEMON_JAVA_OPTIS="-verbose:gc -XX:-PrintGCDetails -XX:+PrintGCTimeStamps"
-
+# export SPARK_DAEMON_JAVA_OPTIS="-verbose:gc -XX:-PrintGCDetails -XX:+PrintGCTimeStamps"
 export SPARK_MASTER_IP=hadoop
 export SPARK_MASTER_PORT=7077
 export SPARK_MASTER_WEBUI_PORT=8010
