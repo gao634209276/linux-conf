@@ -36,6 +36,23 @@
 		<name>javax.jdo.option.ConnectionPassword</name>
 		<value>hive</value>
 	</property>
+	<!--hive server thrift-->
+	<property>
+		<name>hive.server2.thrift.bind.host</name>
+		<value>hadoop</value>
+	</property>
+	<property>
+		<name>hive.server2.transport.mode</name>
+		<value>http</value>
+	</property>
+	<property>
+		<name>hive.server2.thrift.http.port</name>
+		<value>10001</value>
+	</property>
+	<property>
+		<name>hive.server2.thrift.http.path</name>
+		<value>cliservice</value>
+	</property>
 	<!--hive-hwi-->
 	<property>
 		<name>hive.hwi.listen.host</name>
@@ -64,5 +81,5 @@
 		<value>hadoop:2181</value>
 	</property>
 	<!-- hive spark -->
-
+<!--https://cwiki.apache.org/confluence/display/Hive/Configuration+Properties#ConfigurationProperties-HiveServer2WebUI-->
 </configuration>
