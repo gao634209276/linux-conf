@@ -53,6 +53,32 @@
 		<name>hive.server2.thrift.http.path</name>
 		<value>cliservice</value>
 	</property>
+	<!-- 设置为false，查询将以运行hiveserver2进程的用户运行--> 
+	<property>
+		<name>hive.server2.enable.doAs</name>
+		<value>ture</value>
+	</property>
+	<property>
+		<name>hive.server2.thrift.bind.host</name>
+		<value>hadoop</value>
+	</property>
+	<property>
+		<name>hive.server2.thrift.port</name>
+		<value>10000</value>
+	</property>
+	<!--hive.exec-->
+	<property>
+		<name>hive.exec.parallel</name>
+		<value>true</value>
+	</property>
+	<property>
+		<name>hive.exec.dynamic.partition.mode</name>
+		<value>strict</value>
+	</property>
+	<property>
+		<name>hive.exec.compress.intermediate</name>
+		<value>true</value>
+	</property>
 	<!--hive-hwi-->
 	<property>
 		<name>hive.hwi.listen.host</name>
@@ -83,3 +109,5 @@
 	<!-- hive spark -->
 <!--https://cwiki.apache.org/confluence/display/Hive/Configuration+Properties#ConfigurationProperties-HiveServer2WebUI-->
 </configuration>
+
+
