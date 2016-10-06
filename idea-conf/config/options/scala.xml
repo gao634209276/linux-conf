@@ -1,0 +1,7 @@
+<application>
+  <component name="ScalaSettings">
+    <option name="COMPILE_SERVER_PORT" value="42389" />
+    <option name="COMPILE_SERVER_ID" value="b64ae0fa-32b3-470f-8471-64824a75a3ee" />
+    <option name="COMPILE_SERVER_SDK" value="1.7" />
+  </component>
+</application>

@@ -1,0 +1,31 @@
+<application>
+  <component name="StatisticsApplicationUsages">
+    <group name="Git">
+      <project id="myScala" values="config.ssh.enabled,data.remote.branches.count.1,data.remotes.in.project.1,config.push.update.all.roots.enabled,config.force.push.enabled,config.warn.about.crlf.enabled,config.update.type.BRANCH_DEFAULT,config.warn.about.detached.enabled,data.local.branches.count.1,config.cherry-pick.autocommit.disabled,config.repo.sync.NOT_DECIDED,config.save.policy.STASH,config.push.autoupdate.disabled" collectionTime="1475723528624" />
+    </group>
+    <group name="vcs">
+      <project id="myScala" values="Git" collectionTime="1475723528603" />
+    </group>
+    <group name="run-configuration-type-temp">
+      <project id="myScala" values="Application" collectionTime="1475723528606" />
+    </group>
+    <group name="language-level">
+      <project id="myScala" values="JDK_1_7" collectionTime="1475723528622" />
+    </group>
+    <group name="file-type">
+      <project id="myScala" values="Manifest,UNKNOWN,PLAIN_TEXT,IDEA_MODULE" collectionTime="1475723528615" />
+    </group>
+    <group name="module type">
+      <project id="myScala" values="JAVA_MODULE" collectionTime="1475723528604" />
+    </group>
+  </component>
+  <component name="UsageTrigger">
+    <counts>
+      <entry feature="ideaapp.started" count="1" />
+      <entry feature="welcome.screen.WelcomeScreen.Configure" count="3" />
+      <entry feature="welcome.screen.WelcomeScreen.OpenProject" count="1" />
+      <entry feature="welcome.screen.WelcomeScreen.Plugins" count="1" />
+      <entry feature="welcome.screen.WelcomeScreen.Settings" count="1" />
+    </counts>
+  </component>
+</application>

@@ -1,0 +1,56 @@
+<application>
+  <component name="VimSettings">
+    <state version="4" enabled="false" />
+    <globalmarks />
+    <filemarks>
+      <file name="$USER_HOME$/Documents/workspaces/IdeaProjects/spark-study/src/main/scala/spark/sql/sql2.txt" timestamp="1475312938989">
+        <mark key="[" line="13" column="5" />
+        <mark key="]" line="5" column="86" />
+        <mark key="^" line="5" column="86" />
+        <mark key="." line="5" column="86" />
+      </file>
+      <file name="$USER_HOME$/Documents/workspaces/IdeaProjects/spark-study/src/main/java/spark/sql/sql1.txt" timestamp="1475312021602">
+        <mark key="[" line="27" column="16" />
+        <mark key="]" line="28" column="0" />
+        <mark key="." line="28" column="0" />
+      </file>
+      <file name="$USER_HOME$/Documents/workspaces/IdeaProjects/spark-study/src/main/scala/spark/sql/sql1.txt" timestamp="1475313520602">
+        <mark key="[" line="44" column="3" />
+      </file>
+      <file name="$USER_HOME$/Documents/workspaces/IdeaProjects/spark-study/src/main/java/spark/cores/JavaWordCount.java" timestamp="1475312945021" />
+    </filemarks>
+    <jumps />
+    <registers>
+      <register name="1" type="2">
+        <text encoding="base64">ICAgICAgICBOYW1lK0FnZStUZWw6Cg==</text>
+      </register>
+      <register name="&quot;" type="2">
+        <text encoding="base64">ICAgICAgICBOYW1lK0FnZStUZWw6Cg==</text>
+      </register>
+    </registers>
+    <search>
+      <last-dir>0</last-dir>
+      <show-last>false</show-last>
+    </search>
+    <history>
+      <history-search />
+      <history-cmd />
+      <history-expr />
+      <history-input />
+    </history>
+    <shortcut-conflicts>
+      <shortcut-conflict owner="ide">
+        <text>ctrl pressed X</text>
+      </shortcut-conflict>
+      <shortcut-conflict owner="vim">
+        <text>ctrl pressed S</text>
+      </shortcut-conflict>
+      <shortcut-conflict owner="ide">
+        <text>ctrl pressed V</text>
+      </shortcut-conflict>
+      <shortcut-conflict owner="vim">
+        <text>ctrl pressed C</text>
+      </shortcut-conflict>
+    </shortcut-conflicts>
+  </component>
+</application>

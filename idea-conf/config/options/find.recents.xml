@@ -1,0 +1,36 @@
+<application>
+  <component name="FindRecents">
+    <findStrings>
+      <find>schedulableBuilder =</find>
+      <find>resourceOffers(</find>
+      <find>driverEndpoint =</find>
+      <find>submitTask</find>
+      <find>reviveOffers</find>
+      <find>_env =</find>
+      <find>Auth</find>
+      <find>akkaUtils.</find>
+      <find>persistent</find>
+      <find>command</find>
+      <find>Changing view acls to</find>
+      <find>checkpoint</find>
+      <find>setCheckpointDir</find>
+      <find>RDdCheckpointd</find>
+      <find>tungsten</find>
+      <find>sorter =</find>
+      <find>merge</find>
+      <find>READ</find>
+      <find>page</find>
+      <find>RDD</find>
+      <find>jobResult</find>
+      <find>Got job</find>
+      <find>handleJobSubmitted</find>
+      <find>DAGSchedulerEventProcessLoop</find>
+      <find>start</find>
+      <find>handleMapStageSubmitted</find>
+      <find>onReceive</find>
+      <find>eventProcessLoop.start</find>
+      <find>markMapStageJobAsFinished</find>
+      <find>_dagScheduler =</find>
+    </findStrings>
+  </component>
+</application>

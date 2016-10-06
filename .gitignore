@@ -1,0 +1,4 @@
+idea-conf/config/plugins/*
+idea-conf/config/tasks/*
+idea-conf/config/fileTemplates/*
+idea-conf/system/*
