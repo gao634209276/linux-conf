@@ -21,6 +21,10 @@
 		<name>fs.defaultFS</name>
 		<value>hdfs://hadoop:9000</value>
 	</property>
+	<property>  
+		<name>fs.trash.interval</name>  
+		<value>3600</value>  
+	</property>  
 	<property>
 		<name>hadoop.tmp.dir</name>
 		<value>/opt/modules/hadoop-2.7.2/data-single/tmp</value>

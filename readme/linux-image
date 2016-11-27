@@ -1,0 +1,29 @@
+在装Linux/Ubuntu时，一般都会把/boot单独分区，给一定容量的空间，这样以后更新内核的时候，系统把新内核添加到/boot下，每次更新时新的内核不断加入，但旧内核没有被删除，/boot下内核越来越多，导致空间不足。
+
+
+
+在装Linux/Ubuntu时，一般都会把/boot单独分区，给一定容量的空间，这样以后更新内核的时候，系统把新内核添加到/boot下，每次更新时新的内核不断加入，但旧内核没有被删除，/boot下内核越来越多，导致空间不足。
+
+
+解决方法：
+
+删除旧内核版本，保留目前所用版本即可，具体命令如下：
+
+	1、命令行输入：sudo apt-get remove linux-image 后面两个tab，将显示所有的内核版本
+		或dpkg --get-selections|grep linux
+	2、命令行输入：uname -a 查看目前使用的内核是哪个版本
+	3、命令行输入：sudo apt-get purge  加旧内核版本，卸载旧内核(除目前正在使用的版本)
+
+如想要卸载版本 linux-image-3.13.0-24-generic 时，命令如下
+
+根据提示输入yes即可完成此版本卸载
+
+
+注：理论上，除正在使用的版本外其它的都可以删除卸载，但刚升级的版本可能不稳定，建议保留之前的一两个版本备用！
+
+
+解决ubuntu升级时/boot空间不足：http://www.linuxdiyf.com/linux/13742.html
+UbubtuKylin15.04的Boot空间不足问题解决：http://www.linuxdiyf.com/linux/12908.html
+Ubuntu下提示/boot空间不足解决办法：http://www.linuxdiyf.com/linux/12134.html
+升级Ubuntu 10.10后/boot空间不足无法启动的解决方法：http://www.linuxdiyf.com/linux/9601.html
+
