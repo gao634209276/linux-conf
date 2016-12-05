@@ -16,6 +16,4 @@
 #
 
 # A Spark Worker will be started on each of the machines listed below.
-hadoop
-#hadoop1
-#hadoop2
+localhost

@@ -40,13 +40,9 @@
 # - SPARK_EXECUTOR_CORES, Number of cores for the executors (Default: 1).
 # - SPARK_EXECUTOR_MEMORY, Memory per Executor (e.g. 1000M, 2G) (Default: 1G)
 # - SPARK_DRIVER_MEMORY, Memory for Driver (e.g. 1000M, 2G) (Default: 1G)
-# - SPARK_YARN_APP_NAME, The name of your application (Default: Spark)
-# - SPARK_YARN_QUEUE, The hadoop queue to use for allocation requests (Default: ‘default’)
-# - SPARK_YARN_DIST_FILES, Comma separated list of files to be distributed with the job.
-# - SPARK_YARN_DIST_ARCHIVES, Comma separated list of archives to be distributed with the job.
 
 # Options for the daemons used in the standalone deploy mode
-# - SPARK_MASTER_IP, to bind the master to a different IP address or hostname
+# - SPARK_MASTER_HOST, to bind the master to a different IP address or hostname
 # - SPARK_MASTER_PORT / SPARK_MASTER_WEBUI_PORT, to use non-default ports for the master
 # - SPARK_MASTER_OPTS, to set config properties only for the master (e.g. "-Dx=y")
 # - SPARK_WORKER_CORES, to set the number of cores to use on this machine
@@ -68,26 +64,36 @@
 # - SPARK_IDENT_STRING  A string representing this instance of spark. (Default: $USER)
 # - SPARK_NICENESS      The scheduling priority for daemons. (Default: 0)
 
-# export HADOOP_HOME=/opt/modules/hadoop-2.7.2
-export SPARK_LIBRARY_PATH=$SPARK_LIBRARY_PATH:/opt/modules/spark-1.6.1/lib:/usr/local/lzo/lib
-#export SPARK_CLASSPATH=$SPARK_CLASSPATH:/opt/modules/hadoop-2.7.2/share/hadoop/common/hadoop-lzo-0.4.20-SNAPSHOT.jar
-#export HADOOP_CONF_DIR=/opt/modules/hadoop-2.7.2/etc/hadoop
+
+export HADOOP_HOME=/opt/modules/hadoop-2.7.2
+export HADOOP_CONF_DIR=/opt/modules/hadoop-2.7.2/etc/hadoop
 export SCALA_HOME=/usr/local/scala-2.10.4
 export JAVA_HOME=/usr/local/java/jdk1.7.0_80
-# export SPARK_JAVA_OPTS="-verbose:gc -XX:-PrintGCDetails -XX:+PrintGCTimeStamps"
-# export SPARK_DAEMON_JAVA_OPTIS="-verbose:gc -XX:-PrintGCDetails -XX:+PrintGCTimeStamps"
+
 export SPARK_MASTER_IP=hadoop
-export SPARK_MASTER_PORT=7077
-export SPARK_MASTER_WEBUI_PORT=8010
-
-export SPARK_WORKER_PORT=7078
-export SPARK_WORKER_WEBUI_PORT=8011
-#export SPARK_WORKER_INSTANCES=2
-export SPARK_WORKER_CORES=5
-export SPARK_WORKER_MEMORY=4g
-
-export SPARK_DRIVER_MEMPRY=4g
-export SPARK_EXECUTOR_MEMORY=4g
 export SPARK_EXECUTOR_INSTANCES=1
-# export SPARK_HISTORY_OPTS="-Dspark.history.fs.logDirectory=hdfs://hadoop:9000/user/spark/history"
-export SPARK_HISTORY_OPTS="-Dspark.history.fs.logDirectory=/opt/modules/spark-1.6.1/data/history"
+export SPARK_EXECUTOR_CORES=3
+export SPARK_EXECUTOR_MEMORY=8g
+export SPARK_DRIVER_MEMORY=2g
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
