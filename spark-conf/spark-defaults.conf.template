@@ -25,39 +25,3 @@
 # spark.serializer                 org.apache.spark.serializer.KryoSerializer
 # spark.driver.memory              5g
 # spark.executor.extraJavaOptions  -XX:+PrintGCDetails -Dkey=value -Dnumbers="one two three"
-
-
-spark.executor.extraClassPath   /opt/modules/hadoop-2.7.2/share/hadoop/common/hadoop-lzo-0.4.20-SNAPSHOT.jar:alluxio-core-client-1.3.0-SNAPSHOT-jar-with-dependencies.jar
-spark.driver.extraClassPath     /opt/modules/hadoop-2.7.2/share/hadoop/common/hadoop-lzo-0.4.20-SNAPSHOT.jar:alluxio-core-client-1.3.0-SNAPSHOT-jar-with-dependencies.jar
-
-
-spark.master                     yarn
-spark.eventLog.enabled           true
-spark.eventLog.dir               hdfs://hadoop:9000/user/spark/history
-spark.yarn.historyServer.address hadoop:18080
-# spark.sql.warehouse.dir        hdfs://user/hive/warehouse
-spark
-
-
-
-
-
-
-
-spark.serializer                 org.apache.spark.serializer.KryoSerializer
-spark.memory.fraction           0.75
-spark.locality.wait             5s
-spark.locality.wait.process     5s
-spark.locality.wait.node        3s
-spark.locality.wait.rack        2s
-spark.reducer.maxSizeInFlight   64m
-spark.shuffle.file.buffer       32k
-spark.shuffle.io.retryWait      10s
-## spark.shuffle.manager        tungsten-sort
-
-## deprecated
-# spark.memory.offHeap.enabled     true
-spark.memory.fraction            0.6
-spark.memory.storageFraction     0.5
-
-

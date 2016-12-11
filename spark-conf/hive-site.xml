@@ -8,11 +8,11 @@
 	</property>
 	
 	<!--hive Client-->
-	<!--<property>
+	<property>
 		<name>hive.metastore.uris</name>
 		<value>thrift://hadoop:9083</value>
 		<description>Thrift URI for the remote metastore. Used by metastore client to connect to remote metastore.</description>
-	</property> -->
+	</property>
 	
 	<!--hive-engine with tez-->
 	<!--<property>
